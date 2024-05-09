@@ -1,0 +1,255 @@
+[
+    {
+        "id": 1,
+        "question": "What is the primary goal of financial management?",
+        "choices": [
+            "Increasing employee benefits",
+            "Maximizing shareholder wealth",
+            "Minimizing risk of the company",
+            "Maintaining steady growth"
+        ],
+        "answer": "Maximizing shareholder wealth"
+    },
+    {
+        "id": 2,
+        "question": "What does ROI stand for?",
+        "choices": [
+            "Return on Investment",
+            "Risk of Instability",
+            "Return on Income",
+            "Risk of Insolvency"
+        ],
+        "answer": "Return on Investment"
+    },
+    {
+        "id": 3,
+        "question": "Which financial statement summarizes a company's performance over a fiscal period?",
+        "choices": [
+            "Statement of retained earnings",
+            "Income statement",
+            "Balance sheet",
+            "Cash flow statement"
+        ],
+        "answer": "Income statement"
+    },
+    {
+        "id": 4,
+        "question": "What is the term for the cost of financing a company through debt?",
+        "choices": [
+            "Amortization",
+            "Depreciation",
+            "Interest expense",
+            "Dividend yield"
+        ],
+        "answer": "Interest expense"
+    },
+    {
+        "id": 5,
+        "question": "What metric assesses a company's ability to pay its debt obligations?",
+        "choices": [
+            "Debt to Equity Ratio",
+            "Current Ratio",
+            "Interest Coverage Ratio",
+            "Quick Ratio"
+        ],
+        "answer": "Interest Coverage Ratio"
+    },
+    {
+        "id": 6,
+        "question": "What is a 'bear market'?",
+        "choices": [
+            "A market in which stock prices are rising",
+            "A market in which stock prices are falling",
+            "A market dominated by aggressive traders",
+            "A market showing unusual stability"
+        ],
+        "answer": "A market in which stock prices are falling"
+    },
+    {
+        "id": 7,
+        "question": "What does EPS stand for?",
+        "choices": [
+            "Equity Per Share",
+            "Earnings Per Share",
+            "Estimated Profit Sharing",
+            "External Positioning Strategy"
+        ],
+        "answer": "Earnings Per Share"
+    },
+    {
+        "id": 8,
+        "question": "Which ratio is most commonly used to assess a company's liquidity?",
+        "choices": [
+            "Current Ratio",
+            "Quick Ratio",
+            "Debt to Equity Ratio",
+            "Profit Margin"
+        ],
+        "answer": "Current Ratio"
+    },
+    {
+        "id": 9,
+        "question": "What is the formula for calculating Net Profit Margin?",
+        "choices": [
+            "Gross Profit / Revenue",
+            "EBIT / Revenue",
+            "Net Income / Revenue",
+            "Operating Income / Revenue"
+        ],
+        "answer": "Net Income / Revenue"
+    },
+    {
+        "id": 10,
+        "question": "What financial tool is used to evaluate the desirability of an investment or project?",
+        "choices": [
+            "Net Present Value (NPV)",
+            "Return on Investment (ROI)",
+            "Internal Rate of Return (IRR)",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "id": 11,
+        "question": "What aspect of financial statements does 'financial ratio analysis' primarily deal with?",
+        "choices": [
+            "Profitability",
+            "Liquidity",
+            "Solvency",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "id": 12,
+        "question": "What is 'diversification' in financial management?",
+        "choices": [
+            "Consolidating financial assets into one type",
+            "Spreading out investments to reduce risk",
+            "Focusing on a single economic sector",
+            "Investing only in blue-chip stocks"
+        ],
+        "answer": "Spreading out investments to reduce risk"
+    },
+    {
+        "id": 13,
+        "question": "Which document details a company's planned investments and sources of financing?",
+        "choices": [
+            "Income statement",
+            "Cash flow statement",
+            "Balance sheet",
+	    "Capital budget",
+	],
+	"answer": "Capital budget"
+    },
+    {
+        "id": 14,
+        "question": "What is 'capital structure'?",
+        "choices": [
+            "The physical assets of a company",
+            "The organization of a company’s revenue streams",
+            "The mix of a company’s long-term debt, specific short-term debt, common equity, and preferred equity",
+            "A company’s strategy for budgeting"
+        ],
+        "answer": "The mix of a company’s long-term debt, specific short-term debt, common equity, and preferred equity"
+    },
+    {
+        "id": 15,
+        "question": "What determines a company's market capitalization?",
+        "choices": [
+            "Total asset value",
+            "Annual profit",
+            "The product of the current stock price and the total number of outstanding shares",
+            "The total of all sales revenue"
+        ],
+        "answer": "The product of the current stock price and the total number of outstanding shares"
+    },
+    {
+        "id": 16,
+        "question": "What is 'operating leverage'?",
+        "choices": [
+            "The use of borrowed capital to increase the potential return of an investment",
+            "The ratio of fixed costs to variable costs in a company’s operations",
+            "A measure of how sensitive net operating income is to a given percentage change in revenue",
+            "Both B and C"
+        ],
+        "answer": "Both B and C"
+    },
+    {
+        "id": 17,
+        "question": "What is the primary concern of 'corporate finance'?",
+        "choices": [
+            "Managing international trade",
+            "Maximizing corporate sales",
+            "Managing corporate capital structure and budgeting",
+            "Overseeing employee payroll"
+        ],
+        "answer": "Managing corporate capital structure and budgeting"
+    },
+    {
+        "id": 18,
+        "question": "What does 'liquidity' refer to in financial markets?",
+        "choices": [
+            "The ease with which assets can be converted into cash",
+            "The profitability of a company",
+            "The volume of stocks traded on the stock market",
+            "The amount of liquid cash a company holds"
+        ],
+        "answer": "The ease with which assets can be converted into cash"
+    },
+    {
+        "id": 19,
+        "question": "What is 'financial risk'?",
+        "choices": [
+            "The uncertainty associated with investing in a new market",
+            "The possibility that shareholders will not receive expected returns",
+            "The risk of a company defaulting on its debt obligations",
+            "All of the above"
+        ],
+        "answer": "All of the above"
+    },
+    {
+        "id": 20,
+        "question": "Which type of analysis focuses on economic, market, and company data?",
+        "choices": [
+            "Technical analysis",
+            "Fundamental analysis",
+            "Qualitative analysis",
+            "Quantitative analysis"
+        ],
+        "answer": "Fundamental analysis"
+    },
+    {
+        "id": 21,
+        "question": "What is 'amortization'?",
+        "choices": [
+            "The process of incrementally charging the cost of an asset to expense over its useful life",
+            "The process of decreasing the book value of a financial asset",
+            "The accumulation of money in a sinking fund",
+            "Both A and B"
+        ],
+        "answer": "Both A and B"
+    },
+    {
+        "id": 22,
+        "question": "What is the difference between 'accounts payable' and 'accounts receivable'?",
+        "choices": [
+            "Accounts payable is money owed by a company, while accounts receivable is money owed to the company",
+            "There is no significant difference; both terms are interchangeable",
+            "Accounts payable refers to digital transactions, accounts receivable refers to cash transactions",
+            "Accounts receivable is money owed by a company, while accounts payable is money owed to the company"
+        ],
+        "answer": "Accounts payable is money owed by a company, while accounts receivable is money owed to the company"
+    },
+    {
+        "id": 23,
+        "question": "What financial concept is depicted by the 'time value of money'?",
+        "choices": [
+            "Money today is worth more than the same amount in the future due to its potential earning capacity",
+            "Investments tend to decrease in value over time",
+            "Money can only buy a fixed amount of goods over time",
+            "Economic inflation influences monetary value"
+        ],
+        "answer": "Money today is worth more than the same amount in the future due to its potential earning capacity"
+    },
+]

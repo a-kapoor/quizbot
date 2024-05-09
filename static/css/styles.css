@@ -1,0 +1,71 @@
+/* Basic reset for body padding and margin */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+    padding: 0;
+    line-height: 1.6; /* improves readability */
+}
+
+/* Stylish header with subtle text shadow for depth */
+h1 {
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Card-like appearance for forms with smoother borders and transitions */
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Adjusting label positions with more control and style */
+label {
+    display: block;
+    margin: 20px 0 10px 20px;
+    font-size: 16px; /* larger font size for better readability */
+    color: #666; /* softer color for text */
+}
+
+/* Modern and vibrant button styles with smooth transitions */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* increased font size for better readability */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth color change and subtle transform */
+}
+
+/* Enhanced hover effect with a slight transform */
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Lifts button slightly to give a dynamic feel */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Adds shadow for depth */
+}
+
+/* Focus styles for accessibility */
+button:focus {
+    outline: none; /* Removes default focus outline */
+    box-shadow: 0 0 0 4px rgba(49, 138, 253, 0.5); /* Custom focus style */
+}
+
+/* Custom styles for thicker radio button borders */
+.form-check-input[type="radio"]::before {
+    height: 1em; /* Adjust size as needed */
+    width: 1em;  /* Adjust size as needed */
+    border: 2px solid #000; /* Makes the border thicker and black */
+}
+
+/* If the radio button is checked, style the inner circle as well */
+.form-check-input[type="radio"]:checked::after {
+    height: 0.5em; /* Adjust size as needed */
+    width: 0.5em;  /* Adjust size as needed */
+    border: 2px solid #000; /* Makes the inner circle's border thicker and black */
+}
