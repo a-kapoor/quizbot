@@ -4,72 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz Form</title>
-    <!-- Link to Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Link to your custom style.css -->
     <link href="static/css/styles.css" rel="stylesheet">
 </head>
 <body>
     <div class="container mt-5">
       <h1 class="mb-4">Finance Mock test</h1>
       <button id="startButton" class="btn btn-success mb-3">Start Test</button>
-      <div id="timer" class="mb-3"></div>
+      <div id="timer" class="mb-3">00:30</div>
+      <div id="questionCounter" class="mb-3"></div>
       <form id="quizForm" action="/submit" method="post" class="p-3 mb-2 bg-white shadow rounded" style="display: none;">
-            {% set ns = namespace(index=0) %}
-            {% for question in questions %}
-            <div class="mb-3">
-                <p><strong>{{ question.question }}</strong></p>
-                {% for choice in question.choices %}
-                <div class="form-check">
-                    <input class="form-check-input" type="radio"
-                           name="{{ question.id }}"
-                           value="{{ choice }}"
-                           id="choice{{ ns.index }}_{{ loop.index0 }}">
-                    <label class="form-check-label"
-                           for="choice{{ ns.index }}_{{ loop.index0 }}">
-                        {{ choice }}
-                    </label>
-                </div>
-                {% endfor %}
-                {% set ns.index = ns.index + 1 %}
-            </div>
-            {% endfor %}
-            <button type="submit" class="btn btn-primary">Submit Answers</button>
+	{% for question in questions %}
+	<div class="mb-3 question" id="question{{ loop.index0 }}" style="{{ 'display: block;' if loop.first else 'display: none;' }}">
+          <p><strong>{{ question.question }}</strong></p>
+          {% for choice in question.choices %}
+          <div class="form-check">
+            <input class="form-check-input" type="radio"
+                   name="{{ question.id }}"
+                   value="{{ choice }}"
+                   id="choice{{ loop.index0 }}_{{ loop.index0 }}"
+                   onclick="enableNextButton()">
+            <label class="form-check-label"
+                   for="choice{{ loop.index0 }}_{{ loop.index0 }}">
+                {{ choice }}
+            </label>
+          </div>
+          {% endfor %}
+	</div>
+	{% endfor %}
+	<button type="button" class="btn btn-info" id="nextButton" style="display: none;" onclick="goToNextQuestion()">Next</button>
+	<button type="submit" class="btn btn-primary" style="display: none;">Submit Answers</button>
       </form>
+      
+      <!-- <form id="quizForm" action="/submit" method="post" class="p-3 mb-2 bg-white shadow rounded" style="display: none;"> -->
+      <!--       {% for question in questions %} -->
+      <!--       <div class="mb-3 question" id="question{{ loop.index0 }}" style="{{ 'display: block;' if loop.first else 'display: none;' }}"> -->
+      <!--           <p><strong>{{ question.question }}</strong></p> -->
+      <!--           {% for choice in question.choices %} -->
+      <!--           <div class="form-check"> -->
+      <!--               <input class="form-check-input" type="radio" -->
+      <!--                      name="{{ question.id }}" -->
+      <!--                      value="{{ choice }}" -->
+      <!--                      id="choice{{ loop.index0 }}_{{ loop.index0 }}"> -->
+      <!--               <label class="form-check-label" -->
+      <!--                      for="choice{{ loop.index0 }}_{{ loop.index0 }}"> -->
+      <!--                   {{ choice }} -->
+      <!--               </label> -->
+      <!--           </div> -->
+      <!--           {% endfor %} -->
+      <!--       </div> -->
+      <!--       {% endfor %} -->
+      <!--       <button type="submit" class="btn btn-primary" style="display: none;">Submit Answers</button> -->
+      <!-- </form> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      document.getElementById('startButton').onclick = function() {
-          this.style.display = 'none'; // Hide start button
-          document.getElementById('quizForm').style.display = 'block'; // Show quiz form
-          var numberOfQuestions = 60; // Example: 60 questions
-          var timePerQuestion = 30; // 30 seconds per question
-          var totalTime = numberOfQuestions * timePerQuestion;
-          startTimer(totalTime, document.getElementById('timer')); // Start timer based on number of questions
-      };
-
-      function startTimer(duration, display) {
-          var timer = duration, minutes, seconds;
-          var interval = setInterval(function () {
-              minutes = parseInt(timer / 60, 10);
-              seconds = parseInt(timer % 60, 10);
-
-              minutes = minutes < 10 ? "0" + minutes : minutes;
-              seconds = seconds < 10 ? "0" + seconds : seconds;
-
-              display.textContent = minutes + ":" + seconds;
-
-              if (--timer < 0) {
-                  clearInterval(interval); // Stop the interval
-                  alert('Time is up!');
-                  document.getElementById('quizForm').submit(); // Auto-submit form when time is up
-              }
-          }, 1000);
-      }
-    </script>
+    <script src="static/js/quiz.js"></script>
 </body>
 </html>
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en"> -->
+<!-- <head> -->
+<!--     <meta charset="UTF-8"> -->
+<!--     <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+<!--     <title>Quiz Form</title> -->
+<!--     <\!-- Link to Bootstrap CSS -\-> -->
+<!--     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<!--     <\!-- Link to your custom style.css -\-> -->
+<!--     <link href="static/css/styles.css" rel="stylesheet"> -->
+<!-- </head> -->
+<!-- <body> -->
+<!--     <div class="container mt-5"> -->
+<!--       <h1 class="mb-4">Finance Mock test</h1> -->
+<!--       <button id="startButton" class="btn btn-success mb-3">Start Test</button> -->
+<!--       <div id="timer" class="mb-3"></div> -->
+<!--       <form id="quizForm" action="/submit" method="post" class="p-3 mb-2 bg-white shadow rounded" style="display: none;"> -->
+<!--             {% set ns = namespace(index=0) %} -->
+<!--             {% for question in questions %} -->
+<!--             <div class="mb-3"> -->
+<!--                 <p><strong>{{ question.question }}</strong></p> -->
+<!--                 {% for choice in question.choices %} -->
+<!--                 <div class="form-check"> -->
+<!--                     <input class="form-check-input" type="radio" -->
+<!--                            name="{{ question.id }}" -->
+<!--                            value="{{ choice }}" -->
+<!--                            id="choice{{ ns.index }}_{{ loop.index0 }}"> -->
+<!--                     <label class="form-check-label" -->
+<!--                            for="choice{{ ns.index }}_{{ loop.index0 }}"> -->
+<!--                         {{ choice }} -->
+<!--                     </label> -->
+<!--                 </div> -->
+<!--                 {% endfor %} -->
+<!--                 {% set ns.index = ns.index + 1 %} -->
+<!--             </div> -->
+<!--             {% endfor %} -->
+<!--             <button type="submit" class="btn btn-primary">Submit Answers</button> -->
+<!--       </form> -->
+<!--     </div> -->
+<!--     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script> -->
+
+<!--     <script> -->
+<!--       document.getElementById('startButton').onclick = function() { -->
+<!--           this.style.display = 'none'; // Hide start button -->
+<!--           document.getElementById('quizForm').style.display = 'block'; // Show quiz form -->
+<!--           var numberOfQuestions = 60; // Example: 60 questions -->
+<!--           var timePerQuestion = 30; // 30 seconds per question -->
+<!--           var totalTime = numberOfQuestions * timePerQuestion; -->
+<!--           startTimer(totalTime, document.getElementById('timer')); // Start timer based on number of questions -->
+<!--       }; -->
+
+<!--       function startTimer(duration, display) { -->
+<!--           var timer = duration, minutes, seconds; -->
+<!--           var interval = setInterval(function () { -->
+<!--               minutes = parseInt(timer / 60, 10); -->
+<!--               seconds = parseInt(timer % 60, 10); -->
+
+<!--               minutes = minutes < 10 ? "0" + minutes : minutes; -->
+<!--               seconds = seconds < 10 ? "0" + seconds : seconds; -->
+
+<!--               display.textContent = minutes + ":" + seconds; -->
+
+<!--               if (--timer < 0) { -->
+<!--                   clearInterval(interval); // Stop the interval -->
+<!--                   alert('Time is up!'); -->
+<!--                   document.getElementById('quizForm').submit(); // Auto-submit form when time is up -->
+<!--               } -->
+<!--           }, 1000); -->
+<!--       } -->
+<!--     </script> -->
+<!-- </body> -->
+<!-- </html> -->
 
 <!-- <!DOCTYPE html> -->
 <!-- <html lang="en"> -->
