@@ -17,4 +17,3 @@ tzdata==2022.1
 tzlocal==4.2
 Werkzeug @ file:///croot/werkzeug_1706210078083/work
 zipp @ file:///croot/zipp_1704206909481/work
-Python 3.9.19
